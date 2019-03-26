@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-var htmlWebpackPlugin = require('html-webpack-plugin');
+//var htmlWebpackPlugin = require('html-webpack-plugin');
 var miniCssExtractPlugin = require('mini-css-extract-plugin');
 //var jquerySlim = require('jquery/dist/jquery.slim.min');
 
@@ -11,10 +11,10 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: process.env.NODE_ENV === 'production' ? '[name].js' : '[name]--[hash].js'
+        filename: process.env.NODE_ENV === 'production' ? '[name].min.js' : '[name].dev.js'
     },
     devServer: {
-        contentBase: './dist'
+        contentBase: './'
     },
     module:{
         rules: [
@@ -38,11 +38,11 @@ module.exports = {
         /*new webpack.ProvidePlugin({
             $: 'jquery/dist/jquery.slim.min',
             jQuery: 'jquery/dist/jquery.slim.min'
-        }),*/
+        }),
         new htmlWebpackPlugin({
             filename: 'index.html',
             template: './index.html'
-        }),
+        }),*/
         new miniCssExtractPlugin({
             filename: process.env.NODE_ENV === 'production' ? '[name].css' : '[name]--[hash].css'
         })

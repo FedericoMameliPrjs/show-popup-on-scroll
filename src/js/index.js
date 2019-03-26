@@ -1,6 +1,6 @@
 //import ShowPopupOnScroll from './ShowPopupOnScroll';
 
-window.ShowPopupOnScroll = require('./ShowPopupOnScroll').default;
+window.ShowPopupOnScroll = require('./ShowPopupOnScroll').ShowPopupOnScroll;
 //$('.modal').modal('show');
 /*const a = new ShowPopupOnScroll({
     breakpoint: 768,

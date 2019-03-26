@@ -1,21 +1,3 @@
-html, body{min-height: 100vh;}
-
-body{ margin: 0; padding: 0; box-sizing: border-box;}
-
-.content{
-   padding: 2rem 0;
-    background-color: royalblue;
-}
-
-.box:nth-child(even){
-    background-color: darkcyan;
-    height: 100px;
-}
-.box:nth-child(odd){
-    background-color: lightcoral;
-    height: 100px;
-}
-
 .popup{
     position: fixed;
     top: unset;/*nel caso sia un modal di bootrstrap, crea problemi con il posizionamento*/

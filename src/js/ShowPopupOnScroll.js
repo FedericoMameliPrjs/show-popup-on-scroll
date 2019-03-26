@@ -1,11 +1,8 @@
-//require('bootstrap/js/dist/util.js');
-//require('bootstrap/js/dist/modal.js');
-
-export default class{
+export class ShowPopupOnScroll{
 
     constructor(config = {}){
         this.popupElement = document.querySelector(this.constructor._getClasses().popupBox);
-        this.breakpoint = this._validateConfig(config, this.constructor._getAllowedConfigProperties()[0], null);
+        this.breakpoint = this._validateConfig(config, this.constructor._getAllowedConfigProperties()[0], null); //aggiungere se pensare in max-width o min-width
         this.showTimes = this._validateConfig(config, this.constructor._getAllowedConfigProperties()[1], null);
         this.backdrop = this._validateConfig(config, this.constructor._getAllowedConfigProperties()[2], false);
         this.show = this._validateConfig(config, this.constructor._getAllowedConfigProperties()[3], false);
@@ -166,11 +163,3 @@ export default class{
     }
 
 }
-
-/*
-*
-* breakpoint => definisce fino a quale dispositivo visualizzare il popup => default nessuno
-* showTimes => inidica quante volte deve mostrarsi il popup. default => sempre
-* autoStart => se true
-* backdrop => (true | 'sticky' | false)
-* */
